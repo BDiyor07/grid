@@ -1,0 +1,101 @@
+body {
+    font-size: 15pt;
+}
+.container {
+  width: 100%;
+  height: auto;
+  background: lightblue;
+  display: grid;
+  grid-template-areas: 'bir ikki ikki uch'
+                        'bir tort besh olti'
+                        'bir yetti sakkiz olti';
+                        
+  gap: 20px;
+  text-align: center;
+}
+.item {
+  background: red;
+}
+.item1{
+  grid-area: bir;
+  background: green;
+}
+.item2{
+  grid-area: ikki;
+  height: 70px;
+  background: green;
+}
+.item3{
+  grid-area: uch;
+}
+.item4{
+  grid-area:tort;
+  height: 70px;
+  background: yellow;
+}
+.item7{
+  grid-area: yetti;
+  height: 60px;
+}
+.item5{
+  grid-area: besh;
+}
+.item6{
+  grid-area: olti;
+}
+.item8{
+  grid-area: sakkiz;
+  background: yellow;
+}
+@media only screen and (max-width: 500px){
+  .container{
+    grid-template-areas: 'ikki ikki ikki'
+                          'bir bir uch'
+                          'besh besh besh'
+                          'tort tort tort'
+                          'olti olti olti  '
+                          'yetti yetti yetti '
+                          'sakkiz sakkiz sakkiz';
+      gap: 10px;
+      
+  }
+  .item1{
+    background: blue;
+    height: 50px;
+  }
+  .item2{
+    height: 55px; 
+  }
+  .item5{
+    height: 45px;
+  }
+  .item4 , .item6 , .item7 , .item8{
+    height: 35px;
+    width: 80%;
+    justify-self: center;
+  }
+}
+@media only screen and (min-width: 1100px){
+  .container{
+    grid-template-areas: 'ikki ikki uch'
+                          'bir bir bir'
+                          'besh tort tort'
+                          'besh olti olti'
+                          'besh yetti yetti' 
+                          'sakkiz sakkiz sakkiz';
+    gap: 20px;
+    padding: 10px 20px;
+  }
+  .item2{
+    height: 70px;
+  }
+  .item1{
+    height: 130px;
+  }
+  .item4 , .item6 , .item7{
+    height: 120px;
+  }
+  .item8{
+    height: 140px;
+  }
+}
